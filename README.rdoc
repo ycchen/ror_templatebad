@@ -37,7 +37,19 @@ In order to access to the vraibles within the Twitter Bootstrape framework
 $ touch shared/navigation.html.erb
 
 
-# generate User model 
+# add/modified application.html.erb with bootstrap layout
+
+# Generate devise gem
 $ rails g devise:install
+
+# Generate User model using devise
 $ rails g devise User
+# modified migration file for User model @ db/migrate/date_devise_create_users.rb
+# uncomment all of comment fields
 $ rake db:migrate
+
+# generate User view template
+$ rails g devise:views Users
+
+# check current routes
+$ rake routes

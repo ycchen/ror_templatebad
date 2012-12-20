@@ -17,3 +17,15 @@
 body{
 	padding-top: 60px;
 }
+
+.black-transparent-box {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.grey-box{
+	background: rgba(215, 215, 215, .93);
+	/*background-color: grey;*/
+	color: black;
+	padding: 20px;
+}
