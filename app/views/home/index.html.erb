@@ -17,6 +17,22 @@
 					<div class='grey-box'>
            	 			<h3>What's Being Posted Right Now!</h3>
             			<hr />
+            			<div id="recent_posts"></div>
+            			<div id="recent-loading_posts" class="hide"></div>
+            			<a href="#" id="recent_load_more" class="btn offset1 span5">Load More</a>
+            			<br/>
+            			<pre>
+            				<% if @posts.nil? %>
+            					No Post yet!
+            				<% else %>
+            					<%= pluralize(@posts.count,'Post') %>
+            					<!-- <ul>
+            					<% @posts.each do |post| %>
+            						<li><%= post.content %></li>
+            					<% end %>	
+            					</ul> -->
+            				<% end %>
+            			</pre>
             		</div>
 				</div>
 				<div class="span4">
@@ -49,6 +65,10 @@
 	<div class="row">	
 		<div class="span8">
 			<!-- <div class="black-transparent-box"> -->
+				<% if current_user %>
+    				<pre><%= current_user.to_yaml %></pre>
+    			<% end %>
+    			
 				<h3>Faker</h3>
 				<ul>
 				<% 15.times do |n| %>

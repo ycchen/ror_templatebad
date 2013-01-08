@@ -15,12 +15,19 @@
 
   	<!-- main container -->
     <div class="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
+      <div style="height: 40px;">
+        <%= flashes_helper %>
+      </div>  
+      
       <%= content_tag :h1, yield(:title) if show_title? %>
 
-      <%= yield %>
+      <div class="content">
+        <div class="row">
+          <div class='span12'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
 
     </div>
     

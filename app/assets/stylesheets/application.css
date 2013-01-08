@@ -23,9 +23,15 @@ body{
     padding: 20px;
 }
 
-.grey-box{
-	background: rgba(215, 215, 215, .93);
-	/*background-color: grey;*/
-	color: black;
-	padding: 20px;
+.grey-box {
+  background: rgba(245, 245, 245, .93);
+  color: black;
+  padding: 20px;
+}
+
+.root {
+	margin-top: 30px;
+}
+.well{
+	color: #000;
 }

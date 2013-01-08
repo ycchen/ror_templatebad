@@ -17,7 +17,7 @@ $ rails g controller home index
 root :to => 'home#index'
 
 # setup layout file with navigation, and correspondence files such as js, css, and shared partial file
-
+looms
 # include bootstrap library
 # add gem 'bootstrap-sass-rails' into Gem file
 # Usage - Stylesheets : add following code to application.css
@@ -42,7 +42,7 @@ $ touch shared/navigation.html.erb
 # Generate devise gem
 $ rails g devise:install
 
-# Generate User model using devise
+# *** Generate User model using devise
 $ rails g devise User
 # modified migration file for User model @ db/migrate/date_devise_create_users.rb
 # uncomment all of comment fields
@@ -53,3 +53,19 @@ $ rails g devise:views Users
 
 # check current routes
 $ rake routes
+# check rake command
+$ rake -T
+
+# added display_name and background into models/User.rb as part of attr_accessible
+
+# modified views\devise\registrations\new.html.erb for Sign up route
+# modified views\devise\sessions\new.html.erb for Sign in route
+# added bootstrap layout for both files
+# added Sign in, Sign up, and Sign out link on navigation bar
+
+# *** Create posts Model
+$ rails g scaffold post title:string user_id:integer comment:text type:string content:text
+$ rake db:migrate
+
+# Editing post migration script
+# Added relationship on the Model Post and User

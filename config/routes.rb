@@ -1,7 +1,8 @@
 RorTemplate::Application.routes.draw do
   
-  devise_for :users
+  resources :posts
 
+  devise_for :users
   root :to => 'home#index'
 
   
