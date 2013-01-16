@@ -19,32 +19,49 @@
             			<hr />
             			<div id="recent_posts"></div>
             			<div id="recent-loading_posts" class="hide"></div>
-            			<a href="#" id="recent_load_more" class="btn offset1 span5">Load More</a>
+            			<%= link_to "Load More", root_path, :remote => true, :class=> "btn offset1 span5", :id => "recent_load_more" %>
             			<br/>
-            			<pre>
-            				<% if @posts.nil? %>
-            					No Post yet!
-            				<% else %>
-            					<%= pluralize(@posts.count,'Post') %>
-            					<!-- <ul>
-            					<% @posts.each do |post| %>
-            						<li><%= post.content %></li>
-            					<% end %>	
-            					</ul> -->
-            				<% end %>
-            			</pre>
             		</div>
 				</div>
 				<div class="span4">
-					<div class="black-transparent-box">
-						<h3>span4</h3>
+					<div class='black-transparent-box'>
+			            <h3>Welcome to PointsFeed</h3>
+			            <hr />
+			            <p>
+			              Have too many social media platforms? PointsFeed allows you to combine
+			              your twitter, instagram, etc feeds into a single - easy to
+			              navigate interface. Check it out!
+			            </p>
+		            </div>
+		          	<br>
+					<div class='black-transparent-box'>
+			            <h3>Already a member?</h3>
+			            <hr />
+			            <form method='post' action='<%= new_user_session_path %>'>
+			              <input type='text' placeholder='Email' name='user[email]' />
+			              <input type='password' placeholder='Password' name='user[password]' />
+			              <br>
+			              <input type='submit' value='Sign In' class='btn btn-info' />
+			            </form>
+		          	</div>
+		          	<br>
+					<div class='black-transparent-box'>
+						<h3>Not yet a member?</h3>
 						<hr />
+						<form method='post' action=''>
+							<input type='text' placeholder='Display Name' name='user[display_name]' />
+							<input type='text' placeholder='Email' name='user[email]' />
+							<input type='password' placeholder='Password' name='user[password]' />
+							<input type='password' placeholder='Password Confirmation' name='user[password_confirmation]' />
+							<br>
+							<input type='submit' value='Create An Account' class='btn btn-warning' />
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<br/>
+
 <!-- 
 	<div class="btn-toolbar">
 	  <div class="btn-group">
@@ -60,40 +77,17 @@
 	  </div>
 	</div>
 -->
-<% require 'faker' 
-%>
+<!-- 
+<% require "faker" %>
 	<div class="row">	
 		<div class="span8">
-			<!-- <div class="black-transparent-box"> -->
+			<div class="black-transparent-box">
 				<% if current_user %>
     				<pre><%= current_user.to_yaml %></pre>
     			<% end %>
-    			
-				<h3>Faker</h3>
-				<ul>
-				<% 15.times do |n| %>
-					<li><%= Faker::Company.name %></li>
-				<% end %>
-				</ul>
-			<!-- </div> -->
-		</div>
-
-		<div class="span4">
-			<!-- 
-			<div class='black-transparent-box'>
-				<h3>Not yet a member?</h3>
-				<hr />
-				<form method='post' action=''>
-					<input type='text' placeholder='Display Name' name='user[display_name]' />
-					<input type='text' placeholder='Email' name='user[email]' />
-					<input type='password' placeholder='Password' name='user[password]' />
-					<input type='password' placeholder='Password Confirmation' name='user[password_confirmation]' />
-					<br>
-					<input type='submit' value='Create An Account' class='btn btn-warning' />
-				</form>
 			</div>
-			<br/> 
-			-->
+		</div>
+		<div class="span4">
 			<div class="black-transparent-box">
 				<h3>Faker</h3>
 				<ul>
@@ -113,8 +107,8 @@
 			</div>
 		</div>
 	</div>
-	
-</div>   
+</div>
+ -->
 <!--
  	<div class="row">
 		<div class="span1">1</div>

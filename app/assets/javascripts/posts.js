@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+
+function fetch_recent_posts(div){
+	// div.append("<%= escape_javascript(render(:partial => 'post', :object => @posts))%>");
+}
+
+$(function(){
+	fetch_recent_posts($('#recent_posts'));
+});

@@ -7,7 +7,11 @@ class HomeController < ApplicationController
   	# 	# render :text => "Hello World"
   	# 	# redirect_to dashboard_path
   	# end
-  	
   end
 
+  def recentposts
+  	@posts = Post.all
+  	render :layout => false
+  end
+  
 end

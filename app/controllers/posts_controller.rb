@@ -10,7 +10,11 @@ class PostsController < ApplicationController
       format.json { render json: @posts }
     end
   end
-
+  
+  def recentposts
+    @posts = Post.all
+    render :layout => false
+  end
   # GET /posts/1
   # GET /posts/1.json
   def show
