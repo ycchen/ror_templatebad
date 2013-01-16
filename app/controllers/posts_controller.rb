@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
+<<<<<<< HEAD
   before_filter :authenticate_user!, except: :show
+=======
+>>>>>>> db543bd20ffdb4234fb747d8b29c90e3d68b1975
   # GET /posts
   # GET /posts.json
   def index
@@ -10,11 +13,15 @@ class PostsController < ApplicationController
       format.json { render json: @posts }
     end
   end
+<<<<<<< HEAD
   
   def recentposts
     @posts = Post.all
     render :layout => false
   end
+=======
+
+>>>>>>> db543bd20ffdb4234fb747d8b29c90e3d68b1975
   # GET /posts/1
   # GET /posts/1.json
   def show

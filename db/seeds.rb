@@ -8,6 +8,7 @@
 Rake::Task['db:reset'].invoke
 
 u = User.create!(email: "admin@chen.com", password: "foobar", password_confirmation: "foobar", display_name: "Admin")
+<<<<<<< HEAD
 u1 = User.create!(email: "yungchih@chen.com", password: "foobar", password_confirmation: "foobar", display_name: "Yungchih")
 
 p1 = u1.posts.create!( content: 'Sample Textpost')
@@ -23,3 +24,6 @@ u3 = User.create!(email: "john@chen.com", password: "foobar", password_confirmat
 	20.times do |i|
 		u3.posts.create!( content: "Hypothetical Joe, blathering again.")
 	end
+=======
+
+>>>>>>> db543bd20ffdb4234fb747d8b29c90e3d68b1975
